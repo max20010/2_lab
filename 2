@@ -1,0 +1,22 @@
+
+#include "stdio.h"
+int main()
+{
+	int x[3];
+	printf("Введите три числа: \n");
+	for (int i = 0 ; i < 3 ; i++) {
+		scanf("%d", &x[i]);
+	}
+	for (int i = 0; i < 3; i++) {
+		if (x[i] > 2 && x[i] < 5) {
+			printf("%d попадает в диапазон (2,5)\n", x[i]);
+		}		
+		if (x[i] == 2 || x[i] == 5) {
+			printf("%d лежит на границе диапазона (2,5)\n", x[i]);
+		}
+		if (x[i] < 2 || x[i] > 5) {
+			printf("%d лежит вне диапазона (2,5)\n", x[i]);
+		}
+	}
+	return 0;
+}
